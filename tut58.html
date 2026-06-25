@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String in js.</title>
+</head>
+<body>
+  <script>
+    //Strings
+    let str = "Apnacollege"
+    console.log(str)
+    let str1 = 'Shardha khapra'
+    console.log(str1)
+    console.log( "str[8] = ",str[8]);
+
+    //Template Literal.
+    let specialString = `This is template literal ${1+2+3}`;
+    console.log(specialString);
+    console.log(typeof specialString)
+    // Examples:
+    let obj = {
+      items : "pen",
+      Price: 10,
+    };
+    console.log(`The cost of ${obj.items} is ${obj.Price}  rupees.`);
+    console.log("The cost of ",obj.items, "is", obj.Price, "rupees ." );
+
+    // Escape characters:
+    let name = ("Apna\ncollege") //The length is 12
+    console.log(name)
+    console.log(name.length)
+    let name2 = ("Shivam\tRoy")
+    console.log(name2)
+    name2.length
+
+    //String Method:
+    let a = "Apnacollege"
+    console.log(a.toUpperCase());
+    console.log(a.toLowerCase());
+    let b = "     Shivam roy        "
+    console.log(b)
+    console.log(b.trim());
+
+    //Slice method:
+    let c = [1,2,3,4,5,6];
+    console.log(c.slice(2,6));
+
+    //Concat method:
+    let str3 = "Apnacollege"
+    let str4 = "&Tumharacollege"
+    console.log(str3.concat(str4));
+
+    //replace method:
+    let str5 = "Hello";
+    console.log(str5.replace("H","Y"));
+
+    //charAt method:
+    let str6 = "Ilovejs"; //index 5 is j
+    console.log(str6.charAt(5));
+
+
+  </script>
+
+</body>
+</html>

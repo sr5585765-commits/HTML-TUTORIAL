@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 7 revision.</title>
+</head>
+<style>
+  .box {
+    color: white;
+    background: rgb(158, 158, 240);
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <!-- <button onclick="console.log('Button was clicked')">Click me</button> -->
+  <!-- <button ondblclick="console.log('Button was clicked 2times')">Click me 2x</button> -->
+  <!-- <div class="box" onmouseover="console.log('you are inside div')"> -->
+  <button id="btn">Click me</button>
+  <!-- <div class="box">
+    This is a box.
+  </div> -->
+  <script>
+    //Event Handling :-
+    // let btn = document.querySelector("#btn")
+    // btn.onclick = ()=>{
+    //   console.log("btn was clicked")
+    // }
+
+    //  let box = document.querySelector(".box")
+    //  box.onmouseover =()=>{
+    //   console.log("You are inside div")
+    //  }
+    //Event Object :-
+    // let btn = document.querySelector("#btn")
+    //   btn.onclick = (evt)=>{
+    //     console.log(evt)
+    //     console.log(evt.type)
+    //     console.log(evt.target)
+    //     console.log(evt.clientX,evt.clientY)
+    //   }
+
+    // let box = document.querySelector(".box")
+    // box.onmouseover = (evt) => {
+    //   console.log(evt)
+    //   console.log(evt.type)
+    //   console.log(evt.target)
+    //   console.log(evt.clientX, evt.clientY)
+    // }
+    //Event Listeners :-
+    // let btn = document.querySelector("#btn")
+    // btn.addEventListener("click", (evt) => {
+    //   console.log("Button was clicked")
+    //   console.log(evt)
+    //   console.log(evt.type)
+    //   console.log(evt.target)
+    //   console.log(evt.clientX, evt.clientY)
+    // })
+
+    //Remove EventListener:
+    // btn.addEventListener("click", () => {
+    //   console.log("Button was clicked - handler1")
+    // });
+    // btn.addEventListener("click", () => {
+    //   console.log("Button was clicked - handler2")
+    // });
+    //   const handler3 = () =>{
+    // console.log("Button was clicked - handler3")
+    //   };   
+    // btn.addEventListener("click",handler3);
+
+    // btn.addEventListener("click", () => {
+    //   console.log("Button was clicked - handler4")
+    // });
+    // btn.removeEventListener("click",handler3);
+
+    //Practice Question:-
+    // Create a toggle button that change the screen to dark-mode when clicked light-mode when clicked again ?
+     let btn1 = document.querySelector("#btn")
+     let currMode = "light";
+    btn1.addEventListener("click" , ()=>{
+      if(currMode === "light"){
+        currMode = "Dark" 
+        document.querySelector("body").style.backgroundColor = "black"
+      }
+      else{
+        currMode = "light";
+        document.querySelector("body").style.backgroundColor = "white"
+      }
+       console.log(currMode)
+    })
+      </script>
+</body>
+
+</html>

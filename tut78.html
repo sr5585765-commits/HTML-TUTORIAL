@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js chapter 7.</title>
+    <style>
+        #div {
+            height: 100px;
+            width: 100px;
+            color: white;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline javascript... -->
+    <!-- <button onclick="console.log('Button was clicked');alert('Hello!')">
+        Click me!
+    </button> -->
+    <!-- <button ondblclick="console.log('button was clicked.');alert('Hello')">
+    Clicked button 2times.
+    </button> -->
+    <!-- <div class="div" onmouseover="console.log('you are inside div.')">This is a div.</div> -->
+    <button id="btn">Click me!</button>
+    <div id="div">This is a div.</div>
+    <script>
+        // let btn = document.querySelector("#btn")
+        // console.log(btn)
+        // btn.onclick= (evt) =>{
+        //     console.log(evt);
+        //     console.log(evt.type);
+        //     console.log(evt.target);
+        //     console.log(evt.clientX,evt.clientY);
+        //     console.log("button was clicked."); 
+        // };
+        let div = document.querySelector("#div")
+        div.onmouseover = (evt) => {
+            console.log(evt);
+            console.log(evt.type);
+            console.log(evt.target);
+            console.log(evt.clientX, evt.clientY);
+            console.log("you are inside div.")
+        };
+
+        //<-----------EventListener------------->
+        let btn = document.querySelector("#btn")
+        console.log(btn)
+        // btn.addEventListener("click", (evt) => {
+        //     console.log("btn was clicked");
+        //     console.log(evt);
+        //     console.log(evt.type);
+        //     console.log(evt.target);
+        //     console.log(evt.clientX, evt.clientY);
+        // });
+        btn.addEventListener("click", (evt) => {
+            console.log("btn was clicked - handler1");
+        });
+        btn.addEventListener("click", (evt) => {
+            console.log("btn was clicked - handler2");
+        });
+        //remove event listner:-
+        const handler3  = () => {          // create a new function when add a remove event 
+            console.log("btn was clicked - handler3");
+        };
+        btn.addEventListener("click", handler3);
+        btn.addEventListener("click", (evt) => {
+            console.log("btn was clicked - handler4");
+        });
+        btn.addEventListener("click", (evt) => {
+            console.log("btn was clicked - handler5");
+        });
+        btn.removeEventListener("click",handler3 );
+    </script>
+</body>
+
+</html>

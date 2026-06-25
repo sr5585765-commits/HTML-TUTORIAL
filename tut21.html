@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors & more designing</title>
+    <style>
+        .container {
+            border: 4px solid rgb(237, 100, 100);
+            border-radius: 9px;
+            background-color: rgb(224, 222, 242);
+            padding: 34px;
+            margin: 33px auto;
+            width: 600px;
+            font-family: cursive;
+        }
+
+        #firstpara {
+            color: rgb(64, 10, 179);
+            width: 45%;
+            margin: auto;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(22, 2, 2);
+        }
+
+        a:hover {
+            color: black;
+            background-color: red;
+        }
+
+        a:visited {
+            background-color: rgb(158, 155, 241);
+        }
+
+        .btn {
+            background-color: rgb(165, 170, 243);
+            border: 2px solid rgb(132, 132, 243);
+            padding: 5px;
+            border: none;
+            /* cursor: pointer; */
+            font-size: 14px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: hotpink;
+            border: 2px solid rgb(248, 33, 69);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container" id="cont1">
+            <h2 id="firstpara">This is my heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error praesentium ducimus rem id temporibus
+                beatae libero cum dignissimos, consectetur quidem odio quisquam maxime velit eum aperiam ab magnam
+                impedit eveniet iure tenetur facere? Veniam facilis, veritatis quod consectetur sapiente accusantium!
+            </p>
+            <a href="https://www.google.com/" class="btn">Read more</a>
+            <button class="btn">Contact us</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

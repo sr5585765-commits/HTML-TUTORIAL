@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice of array in chapter 4</title>
+</head>
+<body>
+    <script>
+        // Question-1
+        let marks = [85,97,44,37,76,60];
+        let sum = 0;
+        for (let val of marks){
+           sum += val;
+        }
+        let avg = sum/marks.length;
+        // console.log(`avg marks of the class = ${avg}%`);
+        console.log("Avg marks of student is = ", avg,"%");
+
+        // Question-2 
+        let items = [250,645,300,900,50];
+        // let i = 0;
+        // for (let val of items){
+        //     console.log(`Value at index ${i} = ${val}`);
+        //     let offer = val/10;
+        //     items[i]=items[i]-offer;
+        //     console.log(`After 10 % off = ${items[i]}`);
+        //     i++;
+        // }
+        for (let i = 0; i<items.length; i++){
+            let offer = items[i]/10;
+            items[i] -= offer;
+        }
+        console.log(items)
+
+    </script>
+</body>
+</html>

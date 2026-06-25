@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api chapter 13</title>
+    <style>
+        #btn{
+            background-color: rgb(67, 15, 200);
+            color: white;
+            border: 2px solid rgb(2, 2, 118);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">getFacts</button>
+    <p id="fact"></p>
+    <script>
+        const URL = "https://meowfacts.herokuapp.com/?count=5";
+        const factPara = document.querySelector("#fact");
+        const btn = document.querySelector("#btn");
+        // const getFacts = async () => {
+        //     console.log("getting data ....")
+        //     let response = await fetch(URL);
+        //     console.log(response);
+        //     let data = await response.json();
+        //     //  console.log(data);
+            // factPara.innerText = data.data[0];
+            
+        // };
+         
+        //promise:-
+        function getFacts(){
+            fetch(URL).then((response) =>{
+                return response.json();
+            })
+            .then((data)=>{
+                console.log(data)
+                factPara.innerText = data.data[0];
+            });
+        }
+
+        btn.addEventListener("click", getFacts);
+    </script>
+</body>
+
+</html>

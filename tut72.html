@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching the dom  chapter 6</title>
+             <!-- Shardha Khapra -->
+    <style>
+        .box{
+            height: 23px;
+            width: 23px;
+            margin: 30px;
+            padding: 50px;
+            border: 2px solid black;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> shivam 1</div>
+         <div class="box"> shivam 2</div>
+         <div class="box"> shivam 2.5</div>
+          <div id="redbox" class="box"> shivam 3</div>
+           <div class="box"> shivam 4</div>
+          <div class="box"> shivam 5</div>
+          <div class="box"> shivam 6</div>
+          <span>sbling</span>
+    </div>
+    <script>
+        let boxes = document.getElementsByClassName("box")
+        console.log(boxes)
+        boxes[2].style.backgroundColor = "red"
+        document.getElementById("redbox").style.backgroundColor ="green"
+        document.querySelector(".box").style.backgroundColor="blue"
+        document.querySelectorAll(".box").forEach(e=>{
+            e.style.backgroundColor = "cyan";
+        })
+       e = document.getElementsByTagName("div")
+//<---------- matches and closest------------->
+       e[4].matches("#redbox")
+       e[3].closest("#redbox")
+       e[3].closest(".container")
+       e[3].closest("html")
+e[3].closest("html")
+document.querySelector(".container").contains(e[2])
+// true
+document.querySelector(".container").contains(e[8])
+// false
+document.querySelector(".container").contains(document.querySelector("body"))
+    </script>
+</body>
+</html>

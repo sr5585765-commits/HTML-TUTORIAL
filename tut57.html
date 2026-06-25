@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> chapter 3 loop practice set. </title>
+   
+    
+</head>
+
+<body>
+    <script>
+        //Practice Q1
+        //Print 1 to 100 no in for loop.
+        // for (let i = 1; i <= 100; i++) {
+        //     console.log(i)
+        // }
+        //   print 1 to 100 all even number in for loop.
+        // for (let num = 0; num <= 100; num++) {
+        //     if (num % 2 === 0) {
+        //         console.log("num =", num)
+        //     }
+        // }
+        // Practice Q2
+        // let gameNum = 25;
+        // let userNum = prompt("Pls enter the game number.")
+        // while (userNum != gameNum) {
+        //     userNum = prompt("Pls enter the correct game number.")
+        // }
+        // console.log("Congratulation you enter the right game number.")
+      
+        // Self Practice:
+      // print 1 to 100 no sum:
+    //   let sum = 0;
+    //   for(let i = 1; i<=100; i++){
+    //    sum = sum + i;  //0+1 =1 // 1+2 = 3
+    // }
+    // console.log("sum",sum) 
+      //  Use for loop and print 1 to 100 no:
+    //   for(let i = 1; i<=100; i++){
+    //   console.log(i)
+    //   }
+    //   Same work do (for while loop)
+    // let i = 1;
+    // while(i<=10){
+    //     console.log("Apna college")
+    //     i++;
+    // }
+    // let x = 1;
+    // while(x<=10){
+    //     console.log(x)
+    //     x++;
+    // }
+    //do while loop:
+    // let a = 1;
+    // do{
+    //     console.log(a)
+    //     a++
+    // }while(a<=5);
+
+    //For of loop in js
+    // let str = "JavaScript" 
+    // let size = 0;
+    // for(let val of str ){
+    //     console.log(val)
+    //     size++;
+    // }
+    // console.log("size = ", size)
+
+    //For in loop i js:
+    // let student = {
+    //     Name: " = Rahul Kumar",
+    //     Age: " = 21",
+    //     instituteName: " = Ips group of college technology and managment",
+    //     CGPA : " = 6.5",
+    //     Course : "= B.tech(computer science)"
+    // }
+    // for(let key in student){
+    //     console.log(key , student[key])
+    // }
+      
+    // calculate 1 to 10 number?
+   let sum = 0;
+   let n = 100
+   for(let i = 1; i <= n; i++){
+    sum = sum + i;
+ }
+console.log(sum)
+// for of loop :-
+let str = "Javascript";
+let size = 0;
+for(let i of str){
+    console.log(i);
+    size++;
+}
+console.log("size = ",size);
+//For in loop:-
+let student = {
+    studentName : "Shivam roy",
+    Semester : "6th",
+    isPass : "True"  
+};
+for(let key in student){
+    console.log(key,student[key])
+}
+
+// Practice question 
+// Print all even number ?
+ for(let num = 0; num<= 100 ; num++){
+    if(num%2===0){
+        console.log("num =", num)
+    }
+ }
+// Create a game?
+// let gameNum = 25;
+// let userNum = prompt("Enter the correct Game number")
+// while(gameNum != userNum){
+//     alert("Pls enter the correct game number.")
+// }
+// console.log("congratulation you enter the correct Game number.")
+// String : 
+// Template literal:-
+let obj ={
+ item : "pen",
+ price : 10,
+}
+console.log(`The cost of ${obj.item} is ${obj.price} rupees`)
+console.log("The cost of",obj.item, "is" , obj.price,"rupees")
+
+// Change into next line (/n):- 
+let val = "Apna\ncollege"
+console.log(val)
+// Count in one string 
+let str1 = "Apna\tcollege"
+console.log(str1.length)
+
+// Practice question ;
+let str2 = prompt("Enter the user name")
+let str3 = "@";
+console.log(str3.concat(str2),str2.length)
+
+    </script>
+</body>
+
+</html>

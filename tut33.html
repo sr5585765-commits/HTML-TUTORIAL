@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS selector.</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        }
+        .box::first-line{
+            color: rgb(31, 220, 18);
+        } */
+        .boxes * {
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p,
+        a,
+        .box,
+        [data-color="primary"] {
+            padding-top: 45px;
+        }
+
+        /* .box:nth-child(odd) {
+            background-color: greenyellow;
+        }
+
+        .box:nth-last-child(2) {
+            background-color: blueviolet;
+        } */
+        .boxes::before{
+            content:"Shivam is good boy";
+            color: red;
+        }
+        .boxes::after{
+            content: "Sigma web devlopment course";
+            color: red;
+        }
+        ::selection{
+            color:rgb(223, 84, 84);
+           background: rgb(190, 221, 88);
+        }
+        .box::first-letter{
+            color: peru;
+            font-size: 45px;
+        }
+        input::placeholder{
+         color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am class selector. Lorem ipsum dolor sit amet esse. Officiis maiores
+            excepturi blanditiis esse tenetur .</div>
+        <div class="box">Hey i am body selector.</div>
+        <div class="box">Hey i am id Selector.</div>
+        <div class="box">Hey i am div selector. </div>
+        <input type="text" placeholder="Type your name no any space ">
+    </div>
+</body>
+
+</html>

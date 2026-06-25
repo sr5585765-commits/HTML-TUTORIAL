@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2Dtransform.</title>
+    <style>
+    .container{
+        border: 2px solid black;
+        background-color: #eed1d1;
+        height: 45vh;
+        width: 20vw;
+        display: flex;
+       margin: auto;
+       margin-top: 100px;
+       justify-content: center;
+       align-items: center;
+       transition: all 3s ease-in-out 1s;
+       
+    }
+    .container:hover{
+        transform: rotate(360deg);
+        /* transform: scale(-2); */
+        /* transform: rotate(-360deg); */
+        /* transform: skew(-45deg); */
+        /* transform: translate(500px); */
+        /* transform: translate(0px,500px);
+        transform: translate(0px,-500px);
+        transform: translate(500px,500px); */
+        transform-origin:-0% -0%;
+
+    }
+    p{
+        font-size: large;
+
+    }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <p>This is code with shivam.</p>
+   </div>
+
+</body>
+</html>

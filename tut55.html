@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 in js.</title>
+
+<body>
+    <script>
+    // <--------------------PRACTICE SET :---------------------->
+
+        //Chapter2 Q1
+        /*
+        let age = prompt("What is your age.")
+        if(age>10 && age<20){
+            alert("your age is lies between 10 and 20")
+        }
+        else{
+            alert("Your age is not lies between 10 and 20.")
+        }
+        console.log("done")*/
+        //Chapter2 Q2
+        // let age = prompt("What is your age.")
+        // switch(age){
+        //    case'12':
+        //    console.log("Your age is 12")
+        //    break
+        //    case'13':
+        //    console.log("Your age is 13")
+        //    break
+        //    case'14':
+        //    console.log("Your age is 14")
+        //    break
+        //    case'15':
+        //    console.log("Your age is 15")
+        //    break
+        //    default: 
+        //    console.log("Your age is not special")
+        // }
+        // Chapter 2 P-3
+        /*let age = prompt("What is your age")
+        if (age>10 && age<30){
+            console.log("your age lies between 10 and 30")
+        }
+        else{
+           console.log("Your age does'nt lies between 10 and 20") 
+        } 
+        */
+        //    Chapter 2 P-3
+        /*let num = prompt("What is your number")
+        num = Number.parseInt(num)
+        if (num % 2 == 2 && num % 4 ==2){
+            console.log("your number is divisible by 2 and 4")
+        }
+        else{
+            console.log("your number is not divisible by 2 and 4")
+        } */
+        //    Chapter 2 P-4
+        /*let num = prompt("What is your number")
+        num = Number.parseInt(num)
+    if(num / 2 == 1){
+        console.log("your number is divisible by 2");
+    }
+    else if(num / 3 == 1){
+    console.log("you number is divisible by 3")
+    }
+    else{
+        console.log("your number is not divisible by 2 and 3")
+    }*/
+        // let age = prompt("What is your age")
+        // let a = age>18?"you can drive":"you can not drive"
+        // console.log(a)
+        // let age = prompt("What is your age?")
+        // if (age>=10 && age<=20){
+        //     alert("your age lie btween 10 and 20")
+        // }
+        // else {
+        //     alert("your age doent lie btween 10 and 20")
+        // }
+
+        // <------------Switch case statment--------------->
+        /* let age = prompt("What is your age?")
+         switch (age) {
+             case '12':
+                 console.log("your age is 12")
+                 break
+             case '13':
+                 console.log("your age is 13")
+                 break
+             case '14':
+                 console.log("your age is 14")
+                 break
+             case '15':
+                 console.log("your age is 15")
+                 break
+             default:
+                 console.log("your age is not special")
+         }*/
+        // chapter 2 question no 3
+        // let num = prompt("What is your no?");
+        // num = Number.parseInt(num)
+        // if (num % 2  && num % 3  ) {
+        //     console.log("Your num is divisible by 2 and 3")
+        // }
+        // else {
+        //     console.log("Your num is not divisible by 2 and 3")
+        // }
+        // let num = prompt("What is your number?")
+        // num = Number.parseInt(num)
+        // if (num % 2 === 0) {
+        //     alert("Your number is divisible by 2")
+        // } 
+        // else if(num % 3 === 0){
+        //     alert("Your number is divisible by 3")
+        // }
+        // else if(num % 2 !== 0 && num % 3 !== 0 ){
+        //     alert("Your number is not divisible by 2 and 3")
+        // }
+
+        // For loop :
+        //Print apna college 5 times
+        for(let i = 1;i<=5;i++){
+            console.log("Apna college")
+        }
+        for(let i = 1;i<=10;i++){
+            console.log("Shivam roy")
+        }
+        //Print 1 to 100 numbers
+        
+        for(let i =1; i<=100; i++){
+            console.log(i)
+        }
+       //Sum of 1 to 10
+    //    let sum = 0;
+    //   let n = prompt("What is your number")
+    //    for(let i = 1; i <= n; i++){
+    //    sum = sum + i; //
+    //    }
+    //    console.log("sum =",sum)
+
+    //    While loop in js:
+    // let i = 1;
+    // while(i<=5){
+    //     console.log("i =",i)
+    //     i++;
+    // }
+    //  sum of 1 to 10 number from while loop:
+    // sum = 0;
+    // let n = 10
+    // let i = 1;
+    // while( i<=n){
+    //     sum = sum + i;
+    //     i++
+    //     console.log("sum =",sum)
+    // }
+    // Do while loop:
+    let j = 1;
+    do{
+     console.log("j =",j)
+     j++
+    }while(j<=10);
+
+    // For of loop:
+    // let str = "Javascript";
+    // let size = 0;
+    // for(let val of str){
+    //     console.log("val = ",val)
+    //     size++;
+    // }
+//  console.log("size = ",size)
+  let str1 = ("Apnacollege")
+  let length = 0;
+  for(let i of str1){
+    console.log('i = ',i)
+    length++;
+  }
+  console.log("length = ",length)
+
+  var v = ("Shivam")
+  var count = 0;
+  for(var k of v){
+    console.log("k = ",k)
+    count++;
+  }
+  console.log("count = ",count)
+ 
+  //For in loop:
+  let student = {
+     name : "Shivam roy",
+     RollNumber : "0928231116",
+     cgpa: "7.5",
+     isPass: "true"   
+  }
+ for(let key in student){
+  console.log(key,":",student[key]);
+ }
+
+//  Print all even number by for of loop:
+// let num = prompt ("What is your number")
+// for(let i = 0; i<=num; i++){
+//   if(i%2===0){
+//     console.log(i)
+//   }else{
+    
+//   }
+ 
+// }
+// Create a game:
+// let gameNum = 25;
+// let userNum = prompt("Enter the correct game number")
+// while(userNum != gameNum){
+//     userNum = prompt("You enter wrong number .Guess again")
+// }
+// console.log("Congratulation you enter the correct game number")
+   
+// toUpperCase method:
+let str = "Apna college"
+console.log(str.toUpperCase());
+// Trim method:
+let val = "          Shivam roy       "
+ console.log(val.trim());
+// Replace method:
+let val2 = "Hello";
+ console.log(val2.replace("H","y") ) 
+
+//slice method:
+let val3 = "Apnacollege"
+console.log(val3.slice(2,5))
+
+
+// practice question
+let name = prompt("Username")
+ let name2 = ("@"+name+name.length)
+ console.log(name2)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+</head>
+
+<body>
+    <!-- SOME MORE ARRAY METHOD.  -->
+    <script>
+        // Map method
+        let nums = [2, 3, 4, 5, 6];
+        let newArr = nums.map((val) => {
+            return val * val;
+        });
+        console.log(newArr);
+        //Filter method.
+        let arr = [2, 3, 4, 5, 6, 7, 8];
+        let newArr1 = arr.filter((val) => {
+            // return val % 2 === 0;
+            // return val % 2 !== 0;
+            return val > 3;
+        });
+        console.log(newArr1)
+
+        // Reduce method
+        let arr1 = [1, 2, 3, 4];
+        const output = arr1.reduce((res, curr) => {
+            return res + curr;
+        });
+        console.log(output);
+        // Find large number by reduce method.
+        let arr2 = [5, 7, 4, 3, 2];
+        const output1 = arr2.reduce((prev, curr) => {
+            // return prev > curr ? prev : curr;
+            return prev*curr;
+        });
+        console.log(output1)
+    </script>
+
+</body>
+
+</html>

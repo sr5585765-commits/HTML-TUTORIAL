@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> chapter 6 (part1 and part2) revision</title>
+    <style>
+        .cyan{
+            color: black;
+            background: blue;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+        .small{
+             color: rgb(222, 65, 65);
+            background: rgb(170, 170, 233);
+            border: 2px solid black;
+            height: 200px;
+            width: 100px;
+            text-align: center;
+        }
+        .content{
+            color: rgb(81, 0, 255);
+        }
+        .newClasses{
+            background: rgb(150, 175, 113);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box" id="id1">This is element 1 <span id = "sp1">span1</span></div>
+    <div class="box" id="id2">This is element 2</div> -->
+    <h2 id="H2">Hello java script</h2>
+    <!-- <h1 id="H1">Heading Tag</h1> -->
+    <p class="para">Hi how are you.</p>
+    
+    
+    <!-- <div> 
+        <div class="box">First div</div>
+        <div class="box">Second div</div>
+        <div class="box">Third div</div>
+        <div class="box">Fouth div</div>
+        <div class="box">This is I am</div>
+        <div></div>
+    </div> -->
+    <div class="small">
+        <p>item1</p>
+        <p>item2</p>
+        <p>item3</p>
+    </div>
+    <div>
+        <h2>Fruits name</h2>
+        <ul> 
+            <li>Mango</li>
+            <li>Orange</li>
+            <li>Litchi</li>
+        </ul>
+    </div>
+    <div class="cyan">
+        Hello!
+    </div>
+    
+    <p class="content">This is a paragraph.</p>
+   <script>
+    // Practice of chapter 6  
+    let heading = document.getElementById("H1")
+    console.log(heading)
+    // let ele = document.getElementsByClassName("box")
+    // console.log(ele)
+    let Ele = document.querySelectorAll(".box")
+    console.log(Ele)
+    let tag = document.querySelector("#mix")
+    console.log(tag)
+    let div = document.querySelector("div")
+    console.log(div)
+    let h1 = document.querySelector("#H1")
+    console.log(h1)
+    // Practice Question
+    let h2 = document.querySelector("#H2")
+    console.log(h2.innerText)
+    h2.innerText = h2.innerText+ " From Apna college "
+ // Get Attribute:
+  let p = document.querySelector(".para")
+  console.log(p.getAttribute("class"))
+//   Set Attribute:
+console.log(p.setAttribute("class","newClass"))
+// Node.style:
+  let div2 = document.querySelector(".cyan")
+  console.log(div2)
+  div2.style.backgroundColor = "Green"
+  div2.style.fontSize = "30px"
+  div2.innerText = "Hello world!"
+//   div2.style.visibility = "hidden";
+//  Create element by java script 
+let newBtn = document.createElement("button");
+newBtn .innerText = "Click me";
+console.log(newBtn)
+// div.append(newBtn);
+// div.prepend(newBtn);
+// div.before(newBtn);
+div.after(newBtn)
+
+// let ele = document.createElement("h1")
+// ele.innerHTML = "<i>New Heading</i>"
+// document.querySelector("body").prepend(ele)
+// h1.append(ele)
+
+// Practice question
+// Quesstion1
+let click = document.createElement("button")
+click.innerText = "Click me!"
+click.style.backgroundColor = "red"
+click.style.color = "white"
+document.querySelector("body").prepend(click)
+// Question2
+// Class list :-
+let pare = document.querySelector(".content")
+console.log(pare);
+pare.classList.add("newClasses");
+
+
+   </script>
+</body>
+</html>

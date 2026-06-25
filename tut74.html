@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties chapter 6.</title>
+    <style>
+        .h1 {
+            color: blue;
+            background: yellow;
+        }
+
+        body {
+            background: pink;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+        }
+
+        #header {
+            background-color: rgb(205, 20, 20);
+            color: yellow;
+            text-decoration: solid;
+        }
+
+        .heading {
+            background-color: rgb(189, 42, 42);
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="a1" style="visibility: hidden;">Old heading</h1>
+    <div> <b>Hello world</b></div>
+    <h1 class="h1">Dom demo by apna college.</h1>
+    <h2 id="header">Topic 1:</h2>
+    <h2 class="heading1">Hey this is my short website. </h2>
+    <h2 class="heading">Hello how are you.</h2>
+    <h2 class="heading">I hope you are so well.</h2>
+    <p>Lets learn about Dom concept in details.</p>
+    <p>Events of dom concept.</p>
+    <button class="btn">Click here.</button>
+    <div1>
+        <h3><i>Fruits</i></h3>
+        <ul>
+            <li>Mango</li>
+            <li>banana</li>
+            <li>Litchi</li>
+        </ul>
+    </div1>
+
+    <script>
+        //  alert("Hello")
+        window.console.log("Shivam")
+        console.log("Hello")
+        // document.body.childNodes[3].innerText = "ABCD";
+        let header = document.getElementById("header")
+        //    console.log(header)
+        console.dir(header)
+        let heading = document.getElementsByClassName("heading")
+        console.log(heading)
+        console.dir(heading)
+        let para = document.getElementsByTagName("p")
+        console.log(para)
+        console.dir(para)
+        //<------------query selector---------------->
+        let firstEl = document.querySelector("p");
+        console.log(firstEl)
+        //<------------ All query selector---------------->
+        let ALLEll = document.querySelectorAll("p")
+        console.log(ALLEll)
+        let classthrow = document.querySelector(".heading1")
+        console.log(classthrow)
+        let Allclass = document.querySelectorAll(".heading")
+        console.log(Allclass)
+
+        let div1 = document.querySelector("div1")
+        console.log(div1)
+        let h1 = document.querySelector("h1")
+        console.log(h1) 
+
+        // Practice:
+        let abc = document.querySelector("#header")
+        console.log(abc)
+        // document.querySelector("body").style.backgrouklrndColor = "green"
+
+      //Run time changes in js :
+    //   document.body.style.background = "red";
+    document.body.childNodes[7].innerText = "Truth"
+
+
+    </script>
+</body>
+
+</html>

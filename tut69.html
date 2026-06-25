@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice question chapter 5.</title>
+</head>
+
+<body>
+    <script>
+        // Question 1
+        let marks = [98, 97, 96, 95, 94, 85, 75, 65];
+        const topper = marks.filter((val) => {
+            return val > 90;
+        })
+        console.log(topper);
+        // question 2 
+        let n = prompt("Enter the no.");
+       let arr = [];
+       for(let i = 1; i<=n;i++){
+        arr[i-1] = i;
+    
+       }
+       console.log(arr)
+      const sum = arr.reduce((res,curr)=>{
+        return res+curr;
+      }); 
+      console.log("sum =", sum);
+      const Factorial = arr.reduce((res,curr)=>{
+        return res*curr;
+      })
+      console.log("Factorial =",Factorial);
+    </script>
+</body>
+
+</html>

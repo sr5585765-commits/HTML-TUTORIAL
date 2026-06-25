@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice question chapter 7</title>
+    <style>
+        .dark{
+            color: white;
+            background-color: black;
+        }
+        .light{
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="mode">Change mode.</button>
+    <p>Welcome to my website...</p>
+    <script>
+        let mode = document.querySelector("#mode")
+        let body = document.querySelector("body");
+        console.log(mode);
+        let currMode = "light";  //dark
+        mode.addEventListener("click", () => {
+            if (currMode === "light") {
+                currMode = "dark";
+                document.querySelector("body").style.backgroundColor = "black"
+                // body.classList.add("dark")
+                // body.classList.remove("light")
+            } else {
+                currMode = "light";
+              document.querySelector("body").style.backgroundColor = "white"
+            //   body.classList.add("light")
+            //     body.classList.remove("dark")
+            }
+            console.log(currMode);
+            // console.log("you are trying to change mode.");
+        });
+    </script>
+</body>
+
+</html>

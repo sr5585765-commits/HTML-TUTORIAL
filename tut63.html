@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice question of chapter 4.</title>
+</head>
+
+<body>
+    <script>
+        let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+        console.log(companies);
+        console.log(companies.shift());
+        // console.log(companies.splice(2,1,"ola"));
+        // console.log(companies.push("Amazon"));
+
+        // Practice of chapter 5:-
+        //Function in js:-
+        // function myfunction(){
+        //     console.log("Welcome to apna college.")
+        //     console.log("we are learning javascript")
+        //     console.log("Welcome to apna college.")
+        //     console.log("we are learning javascript")
+        //     console.log("Welcome to apna college.")
+        //     console.log("we are learning javascript")
+
+        // }
+        // myfunction();
+        // myfunction();
+
+        // Arrow function in js 
+        const arrowSum = (a, b) => {
+            return a + b;
+        };
+
+        // Practice question 
+        // function countVowels (str){
+        //     let i = 0;
+        //   for(let val of str){
+        //     if(val === "a"|| val === "e"|| val === "i"||val === "o"||val === "u"){
+        //      i++;
+        //     }
+        //   }
+        //   console.log(i);
+        // }
+//  Same question do for Arrow function 
+
+const countVow = (str)=>{
+     let i = 0;
+          for(let val of str){
+            if(val === "a"|| val === "e"|| val === "i"||val === "o"||val === "u"){
+             i++;
+            }
+          }
+          console.log(i);
+}
+// For Each loop in js 
+
+let arr = ["Pune","Hydrabad","Mumbai"]
+arr.forEach((val) => {
+    console.log(val);
+})
+
+// Practice question 
+let arr1 = [2,3,4,5,6,7];
+arr1.forEach((val)=>{
+    console.log(val*val)
+})
+
+// Map method:
+let arr2 = [22,33,44,55,66]
+ let newArr = arr2.map((val) =>{
+     console.log(val)
+     return val*val
+    })
+console.log(newArr)
+
+// Fliter method :
+let arr3 = [2,3,4,5,6,7,8];
+ let evenArr =arr3.filter((val)=>{
+    return val % 2 === 0;
+})
+console.log(evenArr)
+// Reduce method 
+let arr4 = [1,2,3,4];
+ let output = arr4.reduce ((res , curr) =>{
+    return res + curr;
+})
+console.log(output);
+//  Find greater number by reduce method 
+let arr5 = [3,4,56,7];
+ let newArr5 = arr5.reduce((prev,curr)=>{
+return prev > curr ?prev:curr;
+})
+console.log(newArr5)
+
+// Practice question 
+let newArrr = [99,98,97,95,76,78,89,67,56,45,33];
+ let topper = newArrr.filter((val) =>{
+    return val > 90; 
+})
+console.log(topper)
+// Practice question :
+  let n = prompt("Enter a number")
+  let arr6 = [];
+  for(let i = 1; i <= n; i++){
+    arr6[i - 1] = i;  //1(0),2(1),3(2),4(3),5(4)
+  }
+  console.log(arr6)
+ let sum = arr6.reduce((res,curr) =>{
+ return res + curr;
+ })
+ console.log("sum = " ,sum)
+ let mul = arr6.reduce((res,curr) =>{
+ return res * curr;
+ })
+ console.log("factorial = " ,mul)
+
+
+
+
+
+ </script>
+</body>
+
+</html>

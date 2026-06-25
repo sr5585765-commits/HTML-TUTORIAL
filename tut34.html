@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercise 4 (CSS Multicolor website).</title>
+</head>
+<style>
+    :root {
+        --color: rgb(157, 156, 243);
+        --seccolor: rgb(231, 229, 252);
+    }
+
+    .container {
+        margin-left: 17px;
+        margin-top: 10px;
+        text-align: center;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: larger;
+
+    }
+
+    body {
+        color: var(--seccolor);
+        background-color: var(--seccolor);
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    ul li {
+        list-style: none;
+        display: inline;
+        padding: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 20px;
+
+    }
+
+    .item1 {
+        /* border: 3px solid purple; */
+        width: 1500px;
+        height: 40px;
+        margin: 10px auto;
+        padding-top: 22px;
+        border-radius: 35px;
+        background-color: var(--color);
+    }
+
+
+    ul li a {
+        text-decoration: none;
+    }
+
+    img {
+        /* margin-left:10px ; */
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    ul li a:hover {
+        color: rgb(227, 53, 19);
+    }
+
+    input {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .boxes {
+        border: 4px solid blue;
+        border-radius: 10px;
+        width: 700px;
+        height: 450px;
+        margin-top: 100px;
+        margin-left: 390px;
+        color: blue;
+        font-size: larger;
+        padding-left: 4px;
+
+    }
+
+    h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: red;
+        text-align: center;
+        padding-top: 4px;
+
+    }
+
+    .bg {
+        padding-top: 39px;
+        padding-left: 6px;
+        padding-right: 5px;
+        font-family: cursive;
+        color: rgb(209, 0, 115);
+
+
+    }
+
+    p {
+        color: rgb(226, 11, 11);
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+
+    .btn {
+        border: 3px solid blue;
+        color: blue;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 240px;
+        padding-left: 1px;
+        width: 15vw;
+        height: 5vh;
+        background-color: rgb(189, 189, 238);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+    }
+
+    .btn:hover {
+        background-color: rgb(11, 201, 65);
+        color:red;
+        border: 3px solid rgb(33, 33, 228);
+
+    }
+</style>
+
+<body>
+    <header class="item1">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact us</a></li>
+                <input type="text" placeholder="Search this website">
+
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <!-- <div style="color: rgb(17, 26, 207); ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat incidunt laboriosam, odio quas cum amet atque ipsam facere in esse fuga veniam.</div> -->
+        <img src="https://media.istockphoto.com/id/1189207226/photo/female-patient-checking-vision-in-ophthalmological-clinic.jpg?s=2048x2048&w=is&k=20&c=nkAZK3PCTvRDKlWN4ZlQibVH5CaSe_aaZ9hjBov8qMs="
+            alt="a beautyfull eyes" height="800px" width="1300px">
+    </div>
+
+    <div class="boxes">
+        <h2><u>Healthy eyes.</u></h2>
+        <div class="bg">
+            <p><u>Eye care treatment:</u></p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus,
+            alias explicabo nam aspernatur a et laboriosam. Ratione, totam fuga. Aspernatur placeat accusantium sapiente
+            doloremque architecto omnis quis debitis aliquid sed ea earum voluptate commodi dicta, est, porro labore
+            accusamus ipsum repellat a magni aliquam! Sit, assumenda reiciendis. Cum, provident libero! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Tempora magnam voluptas quo cupiditate, perspiciatis nostrum
+            explicabo ducimus adipisci distinctio, iste repellat tempore? Reiciendis molestiae repellat, culpa et
+            doloremque dolorum laudantium!lorem2000 <span style="color: black;">......</span>
+            <a href="https://www.google.com">Read more</a>
+        </div>
+        <div>
+            <button class="btn">Contact no: 8959974669</button>
+            <button class="bottom"></button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

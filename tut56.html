@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop in js.</title>
+</head>
+            <!-- Shardha khapra -->
+<body>
+    <script>
+        // For loop in js
+        for (let i = 1; i <= 5; i++) {
+            console.log("Apna college")
+        }
+        //Calculate 1 to 5 no:
+        let sum = 0;
+        for (let i = 1; i <= 5; i++) {
+            sum = sum + i;
+        }
+        console.log("sum =", sum);
+        //Calculate 1 to n number:
+        let sum1 = 0;
+        let n = 10
+        for (let i = 0; i <= n; i++) {
+            sum1 = sum1 + i;
+        }
+        console.log("sum = ", sum1);
+        console.log("Loop has ended.")
+        // Example:
+        for(let i = 0; i<=5; i++){
+            console.log("i =",i+1)
+        }
+        //While loop:
+        let i = 1;
+        while (i<=10){
+            console.log("Apnacollege")
+            i++
+        }
+        //do while loop:
+        let j = 20;
+        do{
+            console.log("Apnacollege.")
+            j++;
+        }while(j<=10);
+        // print number in do while loop.
+        let k = 1;
+        do{
+            console.log("k =",k)
+            k++;
+        }while(k<=10);
+        //For of loop in js.
+        let str = "Apnacollege";
+        let size = 0;
+        for(let val of str){
+            console.log("val =",val)
+            size++;
+        }
+        console.log("size =",size)
+        //For in loop in js.
+        let student = {
+            name : "Rahul kumar",
+            age  : 20,
+            cgpa :7.5,
+            isPass: true,
+        };
+        for(let key in student){
+            console.log("key =",key,"value =",student[key])
+        }
+    </script>
+</body>
+
+</html>

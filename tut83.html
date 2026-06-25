@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class and object chapter 11.</title>
+</head>
+<body>
+  <script>
+    const student = {
+      name: "Shivam roy",
+      class: "12th",
+      marks: "55%",
+      printMarks: function () {
+        console.log("marks =", this.marks);//student.marks
+      },
+    };
+    let arr = ["mango", "apple", "grappes", "banana"]
+
+
+
+    const employee = {
+      calcTax() {
+        console.log("tax rate is 10%");
+      },
+    }; 
+    const karanArjun = {
+      salary: 50000,
+      calcTax() {
+        console.log("tax rate is 20%");
+      },
+    };
+    const karanArjun2 = {
+      salary: 35000,
+    };
+    const karanArjun3 = {
+      salary: 40000,
+    };
+    const karanArjun4 = {
+      salary: 36000,
+    };
+    const karanArjun5 = {
+      salary: 34000,
+    };
+    karanArjun.__proto__ = employee;
+    karanArjun2.__proto__ = employee;
+    karanArjun3.__proto__ = employee;
+    karanArjun4.__proto__ = employee;
+    karanArjun5.__proto__ = employee;
+
+    //    <---------- classes in javascript------------>
+    class Toyotacar {
+      // constructor() {
+      //     console.log("creating new object");
+      // }
+      constructor(brand, mileage) {
+        console.log("creating new object");
+        this.brand = brand;
+        this.mileage = mileage;
+      }
+
+      start() {
+        console.log("start")
+      }
+      stop() {
+        console.log("stop")
+      }
+      // setBrand(brand){
+      //     this.brand = brand;
+      // }
+
+    }
+    let fortuner = new Toyotacar("fortuner", 30);
+    console.log(fortuner);
+    // fortuner.setBrand("fortuner")
+    let lenux = new Toyotacar("lenux", 20);
+    console.log(lenux);
+    // lenux.setBrand("lenux")
+
+    // <---------- Inheritance in javascript ----------->
+    class Parent {
+      hello() {
+        console.log("hello");
+      }
+
+    }
+    class Child extends Parent { }
+    let obj = new Child();
+
+    // let myObj = newMyClass();//imp
+    class Person {
+      constructor (name){
+         console.log("Enter the Parent constructor")
+        this.species = "homo species"
+        this.name = name;
+      }
+      eat() {
+        console.log("eat");
+      }
+      sleep() {
+        console.log("sleep");
+      }
+      salary() {
+        console.log("50000")
+      }
+      work(){
+      console.log("Do nothing")
+      }
+    }
+    class Engineer extends Person {
+      // constructor(Branch){
+        // console.log("Enter the child constructor")
+        constructor(name){
+          super(name); // to invoke parents class constructor.
+        }
+        // this.Branch = (Branch)
+        //  console.log("Exist the child constructor")
+        
+        work() {
+           super.eat();
+          console.log("solve problem and bulid something")
+        }
+      }
+    // }
+     class Doctor extends Person {
+      work() {
+        console.log("solve problem and Treat patients")
+      }
+    }
+    // let shivamObj = new Engineer("Shivam");
+    // let shardhaObj = new Doctor();
+    let engObj = new Engineer("shivam")
+
+
+    //------------------------- Second example of constructor :------------------------
+    class person2 {
+     constructor(){
+        this.nature = "Good nature";
+         }
+    eat(){
+        console.log("eat")
+    }
+    sleep(){
+        console.log("sleep")
+    }
+ }
+
+ class advocate  extends person2{
+    work(){
+        console.log("solve case")
+    }
+
+ }
+  let adobj = new person2();
+    //<--------------- Error Handling --------------->
+    let a = 4;
+    let b = 5;
+    console.log(a);
+    console.log(b);
+    console.log("a + b =", a + b);
+    console.log("a - b =", a - b);
+    try{
+     console.log("a + b =", a + b + c);
+    }catch(err){
+      console.log(err);
+    }
+    console.log("a * b =", a * b);
+    console.log("a / b =", a / b);
+
+
+  </script>
+</body>
+
+</html>

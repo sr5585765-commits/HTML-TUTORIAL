@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javascript (chapter-7)</title>
+    <style>
+        Revision by Apna college
+        #btn1 {
+            border: 2px solid black;
+            color: white;
+            background: blue;
+        }
+
+        #btn2 {
+            border: 2px solid black;
+            color: white;
+            background: blue;
+        }
+
+        #box {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            margin: 10px;
+            color: aqua;
+            background: peru;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Inner Html handler -->
+    <button id="btn1" onclick="console.log('Button was clicked.')">Click me</button>
+    <button id="btn2" ondblclick="console.log('Button was clicked in 2x times.')">click me 2x time</button>
+    <div id="box" onmouseover="console.log('you are in div')">I am box.</div>
+</body>
+<script>
+    // javascript handler
+    let btn1 = document.querySelector("#btn1");
+    // btn1.onclick = ()=>{
+    //     console.log("Button was clicked.")
+    //     let a = 25;
+    //     a++;
+    //     console.log(a);
+    // }
+    // btn1.onclick = (evt)=>{
+    //     console.log(evt);
+    //     console.log(evt.target)
+    //     console.log(evt.type)
+    //     console.log(evt.clientX,evt.clientY)
+    // }
+
+    let div = document.querySelector("#box")
+    div.onmouseover = (evt) => {
+        console.log("You are inside div.")
+        console.log(evt);
+        console.log(evt.target)
+        console.log(evt.type)
+        console.log(evt.clientX, evt.clientY)
+
+    }
+    let btn2 = document.querySelector("#btn2")
+    btn2.ondblclick = () => {
+        console.log("Button was clicked in 2 times")
+    }
+
+    // How to work Event Listener in js
+
+    btn1.addEventListener("click", (evt) => {
+        console.log("Button was Clicked in Handler 1")
+    })
+    btn1.addEventListener("click", () => {
+        console.log("Button was Clicked in Handler 2")
+    })
+    
+     btn1.addEventListener("click", () => {
+        console.log("Button was Clicked in Handler 4")
+    })
+     btn1.addEventListener("click", () => {
+        console.log("Button was Clicked in Handler 5")
+    })
+
+    // removeEventListener
+    const handler3 = () => {
+ console.log("Button was Clicked in Handler 3")
+    }
+     btn1.addEventListener("click",handler3);
+    btn1.removeEventListener("click",handler3);
+
+</script>
+
+</html>

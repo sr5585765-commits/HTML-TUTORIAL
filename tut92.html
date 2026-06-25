@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <h1>Nameste javaScript</h1>
+    <script>
+        //Classes(clouser) and objects
+        employees = {
+            salary: 30000,
+            calcTax() {
+                console.log("Tax rate is 10%")//27000
+            }
+        }
+
+        karanArjun = {
+            salary: 4000,
+            calcTax() {
+                console.log("Tax rate is 10.5%") //35000
+            },
+        };
+        karanArjun2 = {
+            salary: 50000,
+            calcTax() {
+                console.log("Tax rate is 11%") //45000
+            },
+        };
+        karanArjun3 = {
+            salary: 60000,
+            calcTax() {
+                console.log("Tax rate is 12.6%") //51000
+            },
+        };
+        karanArjun4 = {
+            salary: 65000,
+            calcTax() {
+                console.log("Tax rate is 13%")
+            },
+        };
+        karanArjun.__proto__ = employees
+        karanArjun2.__proto__ = employees
+        karanArjun3.__proto__ = employees
+        karanArjun4.__proto__ = employees
+
+        //Classes:
+        //  class toyotaCar {
+        //   start(){
+        //   console.log("start")
+        //   }
+        //   stop(){
+        //     console.log("stop")
+        //   }
+        //   setBrand(brand){
+        //     this.brand = brand
+        //   }
+        //  };
+
+        //  let fortuner = new toyotaCar();
+        //  fortuner.setBrand("fortuner");
+        //  let lexus = new toyotaCar();
+
+        //Constructer:-
+        class toyotaCar {
+            constructor(brand, mileage) {
+                console.log("Creating new object")
+                this.brand = brand
+                this.mileage = mileage
+            }
+            start() {
+                console.log("start")
+            }
+            stop() {
+                console.log("stop")
+            }
+
+        };
+
+        let fortuner = new toyotaCar("fortuner", 20);
+        console.log(fortuner)
+        let lexus = new toyotaCar("lexus", 10);
+        console.log(lexus)
+
+        //Inheritance:-
+        //  class person{
+        //     constructor(){
+        //         this.species = "Homo sapiens"
+        //     }
+        //     eat(){
+        //         console.log("eat")
+        //     }
+        //     sleep(){
+        //         console.log("sleep")
+        //     }
+        //     work(){
+        //         console.log("do something")
+        //     }
+        //  }
+
+        //   class enginner extends person{
+        //     work(){
+        //         console.log("solve problem and bulid something")
+        //     } //If child and parent have a same method childs method will be used [method overriding]
+        //   }
+        //   class doctor extends person{
+        //     work(){
+        //         console.log("Treat patient")
+        //     }
+        //   }
+
+        //   let shivam = new enginner();
+        //   let shardha = new doctor();
+
+        //   Super keywords
+
+        class person {
+            constructor(name) {
+                this.species = "Homo sapiens"
+                this.name = name;
+            }
+            eat() {
+                console.log("eat")
+            }
+            sleep() {
+                console.log("sleep")
+            }
+            work() {
+                console.log("do something")
+            }
+        }
+
+        class enginner extends person {
+            constructor(name) {
+                super(name);//to invoke parent class constructer.
+            }
+            work() {
+                super.eat();
+                console.log("solve problem and bulid something")
+            } //If child and parent have a same method childs method will be used [method overriding]
+        }
+        class doctor extends person {
+            work() {
+                console.log("Treat patient")
+            }
+        }
+
+        let engObj = new enginner("Shivam");
+        let docObj = new doctor("Shardha");
+
+        //Error handling:- 
+        let a = 2;
+        let b = 2;
+
+        console.log("a + b = ", a + b);
+        console.log("a - b = ", a - b);
+        try {
+            console.log("a * c = ", a * c);
+        } catch (err) {
+            console.log(err)
+        }
+        console.log("a / b = ", a / b);
+        console.log("a ** b = ", a ** b);
+        console.log("a % b = ", a % b);
+
+
+    </script>
+</body>
+
+</html>

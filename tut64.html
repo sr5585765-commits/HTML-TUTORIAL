@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in js (Chapter-5).</title>
+</head>
+
+<body>
+    <script>
+        function myFunction() {
+            console.log("Welcome to apna college")
+            console.log("We are learning js.")
+        }
+        myFunction();
+        myFunction();
+        function myFunction(msg, n, str) {
+            // paramert ----> input
+            console.log(msg, n, str);
+        }
+        myFunction("I love javascript.", 100, "times");  //Argument
+        //    <----------- Sum Functions ------------>
+        // function 2 no sum
+        function sum(a, b) {
+            console.log(a + b);
+        }
+        // <----------- return function------------->
+        function sum(x,y){
+            s = x + y;
+            return s;
+        }
+        let val = sum(3,4);
+        console.log(val)
+
+        // examples:-
+        function sum(a, b) {
+            s = a + b;
+            console.log("before return")
+            return s;
+            console.log("after return")
+        }
+        let s1 = sum(8, 9);
+        console.log(s1);
+
+        // examples-2...
+
+        function sum(a,b){
+            return a+b;
+        }
+        let s = sum(9,2);
+        console.log(s);
+
+            //    ---------------------------------------------------------------
+        function sum(a, b) {
+            return a + b;
+        }
+        // Moder javascript
+        const arrowSum = (a, b) => {
+            console.log(a + b);
+        };
+        // function mul(a,b){
+        //     return a*b;
+        // }
+        const arrowMul = (a, b) => {
+            // console.log(a*b);
+            return a * b;
+        };
+        const p = arrowMul(2,2);
+        console.log(p);
+
+
+        const printHello = () => {
+            console.log("Hello")
+        };
+        function sum(x, y) {
+            // s = x + y;
+            return x+y;
+        }
+    </script>
+</body>
+
+</html>

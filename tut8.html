@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - lets learn</title>
+    <style>
+        body{
+           background-color: rgb(233, 206, 233); 
+        }
+        #firstpara {
+            box-sizing: border-box;
+            width: 700px;
+            border-radius: 20px;
+            margin: auto;
+
+            padding: 20px 20px;
+            border: 5px solid rgb(186, 119, 231);
+
+
+            background-color:rgb(231, 213, 235);
+        }
+
+        #secondpara {
+            color: darkslateblue;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="secondpara"><pre>                                 Employee information :</pre></h1>
+    <form action="beckend.php">
+        <div id="firstpara">
+            <div>
+                <ul style="list-style-type: disc;">
+                    <li>
+                        Enter your username: <input type="username" id="Username">
+                    </li>
+                </ul>
+
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+
+                        Role: <input type="text" name="my role">
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        Email: <input type="email" name="my email">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+
+                        Age: <input type="age" name="my age">
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        Date: <input type="date" name="my date">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+
+                        Bonus: <input type="bonus" name="bonus">
+                    </li>
+                </ul>
+
+            </div>
+
+            <ul>
+                <li>
+
+                    <u><b>Gender:</b></u>
+
+                    male: <input type="radio" name="my gender">
+                    female: <input type="radio" name="my gender">
+                    Other: <input type="radio" name="my gender">
+
+                </li>
+            </ul>
+            <span> <u><b>Eligblity criteria:</b></u> This from can be filled only by the person who has comlete knowledge about web devlopment and whose age is 19 or above.</span>
+
+            <span>
+                <ul>
+                    <li>
+                        Are you eligibal <input type="checkbox" name="my eligblity" > 
+
+                     
+                        
+                    </li>
+                </ul>          
+            </span>
+            <div>
+
+            </div>
+            <br>
+            <div>
+                write about yourself in <b>200</b>words:<br> <textarea name="my text" cols="70" rows="10"> </textarea>
+
+            </div>
+
+            <br>
+            <div>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+            <div>
+                <u>
+                    <h3>Select only one car</h3>
+                </u>
+                <b><label for="car">car</label></b>
+                <select name="my car" id="car">
+                    <option value="indica">indica</option>
+                    <option value="swift">swift</option>
+                </select>
+            </div>
+            <div>
+              
+            </div>
+    </form>
+    </div>
+
+</body>
+
+</html>

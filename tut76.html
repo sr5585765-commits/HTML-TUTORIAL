@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <title>DOM Part-2 chapter 7</title>
+  <style>
+    #box {
+      color: blue;
+      background-color: red;
+      border: 2px solid green;
+      height: 400px;
+      width: 400px;
+    }
+
+    .contain {
+      color: red;
+    }
+
+    .newClass {
+      background-color: rgb(44, 234, 73);
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div id="box" name="jsdiv">
+    <i>This is a div.</i>
+    <ul>
+      List
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+    </ul>
+  </div>
+  <p class="para">This is a Old paragraph.</p>
+  <p class="contain">This is a New paragraph.</p>
+  <!-- <p id="abc" name="jsDiv">This is a Old paragraph.</p> -->
+  
+  <script>
+    let div = document.querySelector("div");
+    console.log(div);
+    let id = div.getAttribute("id");
+    console.log(id);
+    let name = div.getAttribute("name")
+    console.log(name)
+    let a = div.getAttribute("name")
+    console.log(a)
+    let p = document.querySelector("p")
+    console.log(p)
+    let p1 = p.getAttribute("class")
+    console.log(p1)
+    let p2 = p.setAttribute("class", "newclass")
+    console.log(p2)
+    let p3 = p.setAttribute("class", "abcd")
+    console.log(p3)
+    let div2 = document.querySelector("div")
+    console.log(div2)
+     div.style.backgroundColor = "purple";
+    // box.style.backgroundColor = "purple"; // axices by id
+    // div.innerText = "Hello World!";
+    div.style.fontSize = "26px";
+    div.style.color = "white"
+    div.style.border = "2px solid black"
+    let newBtn = document.createElement("button")
+    newBtn.innerHTML = "<i>Clickme!</i>"
+    console.log(newBtn);
+    div.append(newBtn);
+    // div.prepend(newBtn);
+    // div.before(newBtn)
+    // div.after(newBtn)
+    newBtn.style.padding = "10px"
+    newBtn.style.margin = "20px"
+    newBtn.style.border = "2px solid black"
+    newBtn.style.color = "white"
+    newBtn.style.backgroundColor = "red"
+    let newHeading = document.createElement("h1");
+    newHeading.innerHTML = "<i>Hello div!</i>";
+    console.log(newHeading)
+    document.querySelector("body").prepend(newHeading);
+    //  let para = document.querySelector("p")
+    //  para.remove();
+    let para = document.querySelector("p")
+    para.remove();
+    //  newHeading.remove();
+    //<------------ practice Q2-------------->
+    let par = document.querySelector("p")
+    console.log(par)
+    par.classList.add("newClass");
+
+    let newPara = document.createElement("p")
+    console.log(newPara)
+    newPara.innerHTML="<i>Hey i am good.</i>"
+     document.querySelector("body").prepend(newPara)
+  
+
+    
+   
+    //  Self-Practice:
+  //   let abc = document.querySelector("#abc")
+  //  console.log(abc)
+  //  let id1 = p.getAttribute("id");
+  //  console.log(id1)
+  //  let id2 = p.getAttribute("name")
+  //  console.log(id2)
+   
+  </script>
+</body>
+
+</html>

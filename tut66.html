@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For each loop in array. of chapter 5</title>
+</head>
+<body>
+  <script>
+    let arr = [1,2,3,4,5,6];
+    arr.forEach(function printVal(val){
+      console.log(val);
+    });
+    // Arrowfunction for each loop
+
+    let arr1 = ["Pune", "Delhi","Madrash","Lucknow"];
+    arr1.forEach((val,idx)=>{
+      console.log(val.toUpperCase(),idx);
+    });
+    // Question 1
+    let nums = [2,3,4,5,6];
+    nums.forEach((nums)=>{
+      console.log(nums*nums);
+    });
+
+    let num = [22,33,44,55,66];
+    num.forEach((num)=>{
+      console.log(num*num);
+    });
+  </script>
+</body>
+</html>

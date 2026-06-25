@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table link</title>
+   </head>
+    <body>
+     <script>
+
+    // For of loop in js and print length of str 
+    let str = "apnacollege"
+    let size =  0 ;
+     for(let i of str){
+      console.log(i)
+      size ++;
+     }
+     console.log("size =",size);
+
+ //for in loop: create any objects and array :-
+  let student ={
+    name : "shivam",
+    cgpa : "7.5",
+    age : "21",
+    collegeName : "ips college",
+  }
+  for(let key in student){
+    console.log(key,student[key]);
+  }
+
+  // Question no 1:-
+  //print 1 to 100 all even number by for loop:-
+  
+ for(let i = 1; i<= 100; i++){
+
+  if(i % 2 == 0 ){
+    console.log(i)
+  }else{
+
+  }
+ }
+
+ //Print all odd number by for loop 
+ for(let i = 1; i<= 100; i++){
+
+  if(i % 2 !== 0 ){
+    console.log(i)
+  }else{
+
+  }
+ }
+
+//  create a game number where you start with any random game number. ask the user to keep guessing the game number .until the user correct value . 
+// let num = prompt("Guess the game number")
+// let gameNum = 25;
+// if(gameNum === num){
+//   console.log("you guess the correct game number")
+ 
+// }else{
+//   console.log("sorry! you guess incorrect game number")
+  
+// }
+
+// by while loop:-
+// let gameNum = 28;
+//  let userNum = prompt("Guess the game number")
+// while(gameNum != userNum ){
+//   prompt("you enter the wrong number please guess again.")
+//   // console.log("you guess the wrong number .guess again")
+// }console.log("congratuletion you enter the right game number");
+
+// String :-
+// Create string:-
+let string = "apnacollege"
+console.log(string)
+// create string length :-
+console.log(string.length)
+
+// Template literal:-
+
+let obj = {
+  item : "pen",
+  price : 10,
+}
+console.log(`The price of ${obj.item} is ${obj.price} rupees.`)
+console.log("The price of ",obj.item ,"is",obj.price,"ruppes")
+
+console.log(`${2+3+4+5+6+7+8}`)  //expresson is also added in template literal.
+
+// Escape Character:-
+console.log("apna\ncollege") //  Next line  length is = 12
+
+//Tab character:-                           
+console.log("apna\tcollege")  // Tab space 
+
+// To uppercase method:-
+let str2 = "shivam"
+console.log(str2.toUpperCase())
+// To lowerCase method:-
+let str3 = "shivam"
+console.log(str2.toLowerCase())
+// Trim method:-
+let str1 = "       GANGA           "
+console.log (str1.trim())
+
+// Slice method:- 
+let str4 = "01234567"
+console.log(str4.slice(0,5))
+
+//concat method:-
+let str5 = "apnaclasses"
+console.log(str4.concat(str5))
+//Replace method :-
+let str6  = "hello"
+console.log(str6.replace("h","y"))
+ let str7 = "helololo"
+ console.log(str7.replaceAll("lo","p"))
+//charAt method:-
+let str8 = "Ilovejs"
+console.log(str8.charAt(1))
+
+//Practice question :-
+// let name = prompt("Enter the full name without any space ")
+// console.log("@".concat(name),name.length)
+
+// Array practice question 
+let marks = [85,97,44,37,76,60]
+let sum = 0;
+for(let val of marks){
+//  sum = sum + val
+   sum += val;
+}
+let avg = sum / marks.length;
+console.log(sum)
+console.log(`The avg marks of student is ${avg} %`)
+
+// Question no2:-
+let items = [250,645,300,900,50];
+let i = 0;
+for(let val of items){
+  let offer = val /10;
+  items[i] = items[i] - offer
+  console.log(`After apply offer ${items[i]}`)
+  i++;
+
+}
+
+
+    
+  </script>
+    
+</body>
+</html>

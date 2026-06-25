@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in javascript.</title>
+</head>
+
+<body>
+    <script>
+        // let marks = [90, 98, 97, 76, 75, 89, 35, 28, 56, 89, 77];
+        // console.log(marks)
+        // console.log(marks.length)
+        // let superMen = ["Spidermen", "Antmen", "Hulkmen", "Saktiman"];
+        // console.log(superMen)
+        // console.log(superMen.length)
+
+        // For loop in array
+
+        // Standard method:-
+
+        /*   for(let idx = 0; idx < array.length; idx++){
+         
+         console.log(idx[0])
+     
+        }  */
+
+        // let heroes = ["Spidermen", "Antmen", "Hulkmen", "Saktiman", "thor", "batmen"];
+        // for (let i = 0; i < heroes.length; i++) {
+        //     console.log(heroes[i]);
+        // }
+        //For of loop in array.
+        // let cities = ["Delhi","hu pardesh","Pune","Heydrabaad","Haryana","Gujraat"];
+        // for(let city of cities){
+        //     console.log(city.toUpperCase())
+        // }
+
+        // Let practice of array.
+        // let marks1 = [55,33,44,22,11,66,77]
+        // console.log(marks1)
+        // console.log(marks1.length)  // String are immutable.  // Array is mutable.
+
+        //For loop in array.
+//         let country = ["India", "America", "Dubai", "Australia", "Brazial", "Nepal", "Bhutan", "Thailand", "Denmark", "Sewzerland"]
+
+//         for (let idx = 0; idx < country.length; idx++) {
+//             console.log(country[idx])
+//         }
+//         console.log("Total country = ", country.length)
+
+//         //For of loop in array.
+//         let Fruits = ["banana", "Papaya", "Apple", "Gava", "garpess"]
+//         for (el of Fruits) {
+//             console.log(el.toUpperCase())
+
+//         }
+//         console.log("Total fruits =", Fruits.length)
+
+//         // Practice question
+        let Marks = [89, 45, 60, 67, 80]
+
+        let sum1 = 0;
+        for (let ele of Marks) {
+            sum1 += ele
+ 
+        }
+        console.log("Average marks of student = ", sum1/Marks.length, "%")
+
+//         //    Question no 2:-
+//         // For a given array the price of 5 items->[250,645,300,900,50] all items have an offer of 10% off on item. change the array to store a final price after applying offer?
+
+//         // solution:-  
+//         let item = [250, 645, 300, 900, 50]
+//         let offer = 0;
+//         // for (let val of item) {
+//         //     offer = val / 10;
+//         //     val = val - offer
+//         //    console.log(val)
+//         // }
+//        let del = (11,22,33,44,55)
+//     //    for(let wel of del){
+//     //     console.log(wel)
+//     //    } 
+
+//     for(let i = 0; i < item.length; i++){
+//     offer = item[i] / 10;
+//     item[i] -= offer;
+//     }
+//     console.log(item)
+//  //Self practice:
+
+//  let arr = [34,56,78,98,76] // you give a marks all student in half.
+//    //for of
+// //   for(let k of arr){
+// //     k /= 2;
+// //     console.log(k)
+// //   }
+
+// for(let i = 0; i < arr.length; i++){
+//     arr[i] /= 2;
+// }
+// console.log(arr)
+ 
+ //For loop in array
+ // one example:
+
+ let heroes  = ["Ironman","Antman","Saktiman","Thor","Bluckman"]
+ for(let i = 0; i<heroes.length;i++){
+    console.log(heroes[i])
+ }
+ //For of loop in js
+ let cities = ["Agra","Delhi","Mumbai","Pune","Gwalior","Indore"]
+ for(city of cities){
+    console.log(city)
+ }
+
+ //Practice question:
+ let marks = [85,97,44,37,76,60];
+ let sum = 0;
+ for(let evl of marks){
+    sum =+ evl
+ }
+ console.log("Average marks of student is = ", sum/marks.length, "%")
+
+ //Practice question2 ?
+ items = [250,645,300,900,50]
+//  let i = 0;
+//  for(let val of items){
+//     console.log("Before offer = ",val)
+//     let offer = val/10;
+//     items[i] = items[i]-offer;
+//     console.log("After offer is = ",items[i])
+//     i++;
+//  }
+
+//  for loop
+
+for(let i = 0; i<items.length; i++){
+    let offer = items[i]/10;
+    items[i] =- offer
+}
+console.log(items);
+
+
+        
+      
+
+
+
+    </script>
+</body>
+
+</html> 

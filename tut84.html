@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #btn {
+    border: 1px solid black;
+    background: blue;
+    color: white;
+  }
+
+  .box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background: rgb(223, 82, 223);
+    color: white;
+    padding-top: 10px;
+    margin: 10px;
+    text-align: center;
+
+
+  }
+</style>
+
+<body>
+  <button id="btn" onclick="console.log('button was clicked')">Click me</button>
+  <button id="btn" ondblclick="console.log('button was clicked 2x time')">clicke me 2x times</button>
+  <div class="box" onmouseover="console.log('you are inside div')">I am box.</div>
+  <script>
+    // while loop
+    // let i = 1;
+    // while(i<=5){
+    //   console.log(i);
+    //   i++;
+    // }
+    //do while loop
+    // let count = 5;
+    // do{
+    //   console.log("Apna college")
+    //   i++;
+    // }while(count <= 5);
+
+    // Question 2
+    // let gameNum = 25;
+    // let userNum = prompt("Enter a correct game number.");
+    // while(userNum != gameNum){
+    //   userNum = prompt("you enter the wrong number: guess again.");
+    // }
+    // console.log("Congratulation you enter correct game number.");
+
+    //Chapter 12 revision 
+    // console.log(1);
+    // console.log(2);
+    // setTimeout(() => {
+    //   console.log("Hello")
+    // }, 2000);
+    // console.log(4);
+    // console.log(5);
+    // Callback function:
+    // function sum(a, b) {
+    //   console.log(a + b);
+    // }
+    // function calculator(a, b, sumCallback) {
+    //   sumCallback(a, b);
+    // }
+    // calculator(1, 2, sum);
+
+    // example:
+    // const hello = () => {
+    //   console.log("Hello");
+    // }
+    // setTimeout(hello, 3000);
+    //callback hell problem.
+    // function getData(dataId, getNextData) {
+    //   setTimeout(() => {
+    //     console.log("data", dataId)
+    //     if (getNextData) {
+    //       getNextData()
+    //     }
+    //   }, 2000)
+    // }
+    // getData(1, () => {
+    //   console.log("getting data 2...")
+    //   getData(2, () => {
+    //     console.log("getting data 3...")
+    //     getData(3, () => {
+    //       console.log("getting data 4...")
+    //       getData(4)
+    //     })
+    //   })
+    // })
+    // Promise
+    // let promise = new Promise((resolve,reject) =>{
+    //   console.log("I am promise.");
+    //   // resolve("success");
+    //   reject("some error occured")
+    // })
+    //Create Promise.
+    // function getData(dataId, getNextData) {
+    //   return new Promise ((resolve,reject)=>{
+    //     setTimeout(() => {
+    //       console.log("data", dataId)
+    //       resolve ("success")
+    //       if (getNextData) {
+    //         getNextData()
+    //       }
+    //     }, 6000)
+    //   });
+    // }
+    // const getPromise = () => {
+    //   return new Promise((resolve, reject) => {
+    //     console.log("I am promise");
+    //     resolve("Success");
+    //   });
+    // };
+    // let promise = getPromise();
+    // promise.then((res) => {
+    //   console.log("promise fulfilled", res);
+    // });
+    // promise.catch((err) => {
+    //   console.log("rejected", err);
+    // });
+
+    // function asyncfunc() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log("data1")
+    //       resolve("success");
+
+    //     }, 4000);
+    //   });
+    // }
+    // console.log("Fetching data1...")
+    // let p1 = asyncfunc();
+    // p1.then((res) => {
+    //   console.log(res);
+    // });
+    //  Callbacks
+    // const yellow = () => {
+    //   console.log("Mellow")
+    // }
+    // setTimeout(yellow, 4000);
+    // Callback hell 
+    // function getData(dataId, getNextData) {
+    //   setTimeout(() => {
+    //     console.log("Data", dataId)
+    //     if (getNextData) {
+    //       getNextData();
+    //     } else {
+    //     }
+    //   }, 2000);
+    // }
+    // getData(1, () => {
+    //   console.log("getting data2....")
+    //   getData(2, () => {
+    //     console.log("getting data3....")
+    //     getData(3, () => {
+    //       console.log("getting data4....")
+    //       getData(4, () => {
+    //         console.log("getting data5....")
+    //         getData(5, () => {
+    //           console.log("getting data6....")
+    //           getData(6)
+    //         })
+    //       })
+    //     })
+    //   })
+    // })
+
+    // Promise in js:
+    // let promise = new Promise((resolve,reject)=>{
+    //   console.log("I am promise.")
+    //   // resolve("success");
+    //   reject("Some error occurred...")
+    // })
+    // How to create promise
+    //  function getData(dataId, getNextData) {
+    //   return new Promise ((resolve,reject)=>{
+    //     setTimeout((), => {
+    //       console.log("Data", dataId)
+    //       resolve("Success")
+    //       if (getNextData) {
+    //         getNextData();
+    //       } else {
+    //       }
+    //     }, 6000);
+    //   });
+    // }
+    // const getPromise = ()=>{
+    //   return new Promise((resolve,reject)=>{
+    //     console.log("I am promise.")
+    //     // resolve("Success")
+    //     reject("error")
+    //   })
+    // }
+    // let promise = getPromise();
+    // promise.then((res) =>{
+    //   console.log("Promise fulfilled.",res)
+    // })
+    // promise.catch((err)=>{
+    //   console.log("rejected",err)
+    // })
+
+    // Promise chain
+    // function asyncFun1(){
+    //  return new Promise((resolve,reject)=>{
+    //   setTimeout(()=>{
+    //     console.log("data1")
+    //     resolve("Success")
+    //   },2000);
+    // })
+    // }
+    // function asyncFun2(){
+    //  return new Promise((resolve,reject)=>{
+    //   setTimeout(()=>{
+    //     console.log("data2")
+    //     resolve("Success")
+    //   },2000);
+    // })
+    // }
+    // console.log("Fetching data1....")
+    // let p1 = asyncFun1();
+    // p1.then((res)=>{
+    // console.log("Fetching data2....")
+    //   let p2 = asyncFun2();
+    //   p2.then((res)=>{
+    //   })
+    // })
+    //  function getData(dataId) {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log("Data", dataId)
+    //       resolve("Success")
+    //     }, 3000);
+    //   })
+    // }
+    //   console.log("getting data1....")
+    //  getData(1).then((res)=>{
+    //    console.log("getting data2....")
+    //   return getData(2);
+    //  })
+    //  .then((res)=>{
+    //    console.log("getting data3....")
+    //   return getData(3);
+    //  }) 
+    //  .then((res)=>{
+    //    console.log("getting data4....")
+    //   return getData(4);
+    //  })
+    //  .then((res)=>{
+    //    console.log("getting data5....")
+    //   return getData(5);
+    //  })
+    //  .then((res)=>{
+    //   console.log(res);
+    //  })
+
+    //  Async and await:
+    // function api() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log("Wheather Data")
+    //       resolve(200);
+    //     }, 3000);
+    //   })
+    // }
+    // async function getWheatherData() {
+    //   await api();
+    //   await api();
+
+    // }
+    // function getData(dataId) {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log("Data", dataId)
+    //       resolve("Success")
+    //     }, 2000);
+    //   })
+    // }
+    // async function getAllData() {
+    //   console.log("getting data1....")
+    //   await getData(1);
+    //   console.log("getting data2....")
+    //   await getData(2);
+    //   console.log("getting data3....")
+    //   await getData(3);
+    //   console.log("getting data4....")
+    //   await getData(4);
+    //   console.log("getting data5....")
+    //   await getData(5);
+    //   console.log("getting data6....")
+    //   await getData(6);
+    //   console.log("Success")
+    // }
+
+    //  IIFE method in js
+    // (async function getAllData() {
+    //   console.log("getting data1....")
+    //   await getData(1);
+    //   console.log("getting data2....")
+    //   await getData(2);
+    //   console.log("getting data3....")
+    //   await getData(3);
+    //   console.log("getting data4....")
+    //   await getData(4);
+    //   console.log("getting data5....")
+    //   await getData(5);
+    //   console.log("getting data6....")
+    //   await getData(6);
+    //   console.log("Success")
+    // })();
+    // __________________________________________________________________________________ //
+
+    //class and object (Chapter 12)
+
+    //  How to creat object in javascript. 
+    //     const Shardhakapra = {
+    //       fullName: "Shardha Kapra",
+    //       Marks: 94.5,
+    //       Class: "12th",
+    //       printMarks: function () {
+    //       console.log("Marks =", this.Marks)
+    //       },
+    //     };
+    //   // Employee Data:
+    //   const Employee = {
+    //     calcuTax (){
+    //       console.log("The tax rate is 10%");
+    //     }
+    //   }
+    //    const karnArjun1 = {
+    //     Salary: 50000,
+    //   }
+    //   const karnArjun2 = {
+    //     Salary: 50000,
+    //   }
+    //   const karnArjun3 = {
+    //     Salary: 50000,
+    //   }
+    //   const karnArjun4 = {
+    //     Salary: 50000,
+    //     calcuTax(){
+    //  console.log("The tax rate is 15%");
+    //     },
+    //   };
+    //   const rahul = {
+    //     Salary: 50000,
+    //     calcuTax(){
+    //       console.log("The tax rate is 14%")
+    //     }
+    //   }
+    //  const vishal = {
+    //   Salary: 50000,
+    //   calcuTax(){
+    //     console.log("The tax rate is 15%")
+    //   }
+    //  }
+    //   karnArjun1.__proto__= Employee;
+    //   karnArjun2.__proto__= Employee;
+    //   karnArjun3.__proto__= Employee;
+    //   karnArjun4.__proto__= Employee;
+    //   rahul.__proto__= Employee;
+    //   vishal.__proto__= Employee;
+
+    // How to create a class in  js.
+    // class ToyotaCar{
+    //   constructor(brand,mileage){
+    //     console.log("Creating a new object.")
+    //     this.brandName = brand;
+    //     this.mileage = mileage;
+    //   }
+    //   start(){
+    //     console.log("Start")
+    //   }
+    //   stop(){
+    //     console.log("Stop")
+    //   }
+    //   // setBrand(Brand){
+    //   //   this.brandName = Brand;
+    //   // }
+    // }
+    // let fortuner = new ToyotaCar("Toyota",30);
+    // console.log(fortuner)
+    // // fortuner.setBrand ("Toyota");
+    // let lenux = new ToyotaCar("lenux", 10);
+    // console.log(lenux)
+    // // lenux.setBrand ("Toyota");
+    //  let Thar = new ToyotaCar("Thar",20);
+    //  console.log(Thar)
+    // // Thar.setBrand ("Toyota");
+
+    // Inheritance in js
+    class person{
+      constructor(name){
+        this.species = "homo sapines";
+        this.name = name;
+      }
+      eat(){
+        console.log("eat")
+      }
+      sleep(){
+        console.log("sleep")
+      }
+    }
+    class Engineer extends person{
+       constructor(name){
+        // super();
+        // this.branch = branch;
+            super(name); // to invoke parents class constructor.
+            // this.name = name; //This is also do
+          }
+      work(){
+        super.eat();
+        console.log("Solve problem and bulid something.")
+      }
+    }
+    // class Doctor extends person{
+    //   work(){
+    //     console.log("Treat a patients.")
+    //   }
+    // }
+    // let shivam = new engineer("Chemical eng");
+    let engObj = new Engineer("Shivam");
+    // let shardha = new Doctor();
+
+    const student = {
+      Fullname: "Shivam roy",
+      Marks: 94.4,
+      printMarks: function () {
+        console.log("marks = ", this.Marks);
+      },
+    };
+
+
+    const employee = {
+      calcTax() {
+        console.log("Tax rate is 10%")
+      }
+    }
+
+    const karanArjun1 = {
+      salary: 50000,
+      calcTax() {
+        console.log("Tax rate is 20%")
+      }
+    };
+    const karanArjun2 = {
+      salary: 40000,
+    };
+
+    const karanArjun3 = {
+      salary: 30000,
+    };
+    const karanArjun4 = {
+      salary: 60000,
+    };
+    const karanArjun5 = {
+      salary: 70000,
+    };
+    const karanArjun6 = {
+      salary: 80000,
+    };
+
+    karanArjun1.__proto__ = employee;
+    karanArjun2.__proto__ = employee;
+    karanArjun3.__proto__ = employee;
+    karanArjun4.__proto__ = employee;
+    karanArjun5.__proto__ = employee;
+    karanArjun6.__proto__ = employee;
+
+    // How to create a class in js
+    // class ToyotaCar {
+    //   start(){
+    //     console.log("start")
+    //   };
+    //   stop(){
+    //     console.log("stop")
+    //   }
+
+    //   setBrand(brand){
+    //     this.brand = brand;//value (argument)
+    //    // Notes ---> This.brand(ye bject ki property hai )
+    //   }
+    // }
+    //let Myobj = new Myclass (); (This is a syantax to write a class obj)
+    // let fortuner = new ToyotaCar();
+    // fortuner.setBrand("fortuner")
+    // let lenux = new ToyotaCar();
+
+//  How to create a constructor in js :-
+     class ToyotaCar2 {
+      constructor(brand,mileage){
+        console.log("Creating a new object")
+        this.brand = brand
+        this.mileage = mileage
+      }
+      
+      start(){
+        console.log("start")
+      };
+      stop(){
+        console.log("stop")
+      }
+
+      }
+    //let Myobj = new Myclass (); (This is a syantax to write a class obj)
+    let fortuner2 = new ToyotaCar2("fortuner2",10);
+ 
+    let lenux2 = new ToyotaCar2("lenux2",12);
+
+    // Inheritance in js:-
+     
+    // class person2 {
+    //   constructor(){
+    //     this.species = "homo species"
+    //   }
+    //   eat(){
+    //    console.log("eat")
+    //   }
+    //   sleep(){
+    //  console.log("sleep")
+    //   }
+    //   work(){
+    //     console.log("Do something")
+    //   }
+    // }
+    // class enginner extends person2{
+    //   work(){
+    //     console.log("Solve problem and bulid something")
+    //   }
+    // }
+    // class  doctor extends person2{
+    // work(){
+    //   console.log("Treat patients")
+    // }
+    // }
+    // let shivam = new enginner();
+    //  let shardha = new doctor();
+
+    //  Super keybords
+    // The superkeybords call the constructor of its parent class to access the parents properties and methods.
+    class person2 {
+      constructor(){
+        this.species = "homo species"
+      }
+      eat(){
+       console.log("eat")
+      }
+      sleep(){
+     console.log("sleep")
+      }
+      work(){
+        console.log("Do something")
+      }
+    }
+    class enginner extends person2{
+      constructor(name){
+        super(name)//to invoke parents constructor
+        this.name = name
+      }
+      work(){
+        super.eat();
+        console.log("Solve problem and bulid something")
+      }
+    }
+    class  doctor extends person2{
+    work(){
+      super.eat();
+      console.log("Treat patients")
+    }
+    }
+    let endObj = new enginner("Shivam");
+     let docObj = new doctor("Shardha");
+
+  //Error handling
+  let a = 2;
+  b = 3;
+  console.log("a+b =" ,a + b)
+   console.log("a+b =" ,a + b)
+   try{
+  console.log("a+b =" ,a + c)
+   }catch(err){
+    console.log("c is not defined")
+   }
+     console.log("a+b =" ,a + b)
+      console.log("a+b =" ,a + b)
+       console.log("a+b =" ,a + b)
+  </script>
+</body>
+</html>
+
+
+

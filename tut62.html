@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in js.chapter 4</title>
+</head>
+
+<body>
+    <script>
+        //Push method.
+        let foodItems = ["Apple", "Banana", "Cherry", "Litchi"]
+        console.log(foodItems)
+        foodItems.push("Chips");
+        foodItems.push("Kurkure");
+
+        //pop method.   
+        let deleteditem = foodItems.pop();
+        console.log(foodItems);
+        console.log("Deleted = ", deleteditem);
+
+        // toString method.
+        let marks = [23, 45, 66, 77, 88, 989]
+        console.log(marks)
+        marks.toString();
+
+        // Concat method.
+        let marvelHeroes = ["Thor", "Batmen", "Ironmen"]
+        let dcHeroes = ["Supermen", "Spidermen"]
+        let indianHeroes = ["Shaktimen", "Krish"]
+        let heroes = marvelHeroes.concat(dcHeroes, indianHeroes)
+        console.log(heroes)
+
+        //Unshift method. //add to start.
+        let marvelHeroes1 = ["Thor", "Batmen", "Ironmen"]
+        marvelHeroes1.unshift("Ironmen")
+        console.log(marvelHeroes1)
+
+        //shift method.
+        let dcHeroes1 = ["Supermen", "Spidermen"]
+        let val = dcHeroes1.shift();
+        console.log("Deleted ", val)
+
+        //Slice method.
+        let hero = ["Thor", "Batmen", "Ironmen", "Supermen", "Spidermen", "Shaktimen", "Krish"]
+        console.log(hero)
+        console.log(hero.slice(1, 4));
+
+       
+        
+    // Add Element.
+    // arr.splice(2,0,202);
+
+    //Delete method.
+    // arr.splice(3,1);
+
+    //Replace method.
+    // arr.splice(4,1,101);
+
+//  Practice Question.
+// let mark = [66,54,43,78,86]
+// let sum = 0;
+// for(let val of mark){
+//     sum += val;
+// }
+// console.log(mark)
+// console.log("The average marks of student is ",sum/mark.length,"%")
+
+// let count = [90,89,95,97,87];
+// let sum1 = 0;
+// for(let i = 0;i<count.length;i++){
+// sum1 += count[i];
+// }
+// console.log(count);
+// console.log("The average marks of student is ", sum1 /count.length,"%" )
+
+// // Practice question 2
+// let price  = [245,600,576,700,8999]
+// let i = 0;
+// for(let item of price){
+//      let offer = item / 10;
+//     price[i] = price[i] - offer;
+//     // console.log(`Value after offer = ${price[i]}`);
+//     console.log("Value after offer = ",price[i])
+//     i++;
+// } 
+
+ //Splice method:
+ let arr = [ 1,2,3,4,5,6,7];
+ console.log(arr);
+ console.log(arr.splice(2,2,202));
+</script> 
+</body>
+
+</html>

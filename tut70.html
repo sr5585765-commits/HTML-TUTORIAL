@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title> 
+</head>
+    <!-- Self practice -->
+<body>
+   <script>
+    function myfunction (){
+     console.log("Apna coollege")
+     console.log("I love javascript")
+    }
+    myfunction();
+
+    // I pass some msg:
+    function myFunction (msg){
+        console.log(msg)
+    }
+    myFunction("I love Devlopment")
+
+    // Function 2  -> number sum
+     function sum(x,y){
+        sum = x+y;
+        return sum;
+     }
+      let val = sum(3,4);
+      console.log(val);
+ 
+    function sum1 (x,y){
+        console.log(x+y);   
+    }
+
+    // Arrow function:
+    const arrowfunction = (a,b)=>{
+ console.log(a)
+    }
+    // forEach loop in array
+     let arr = [1,2,3,4,5]
+     arr.forEach((val) => {
+     console.log(val)   
+     });
+    
+     let arr1 = ["Pune", "Delhi", "Mumbai","Mp"]
+     arr1.forEach((val1)=>{
+        // console.log(val1.toUpperCase())
+          console.log(val1.toLowerCase())
+     });
+
+    //  Creat square number by forEach loop in array
+    let arr2 = [1,2,3,4,5]
+    arr2.forEach((num)=>{
+        console.log(num*num)
+    })
+    //Map method:
+    let a =[12,34,55,67]
+     let newArr = a.map((val)=>{
+        return val;
+    })
+    console.log(newArr)
+    //Filter method:
+    let arr4 = [12,1,2,4,53,6,7,8,9,0]
+    let newArr1 = arr4.filter((val)=>{
+       return val%2===0
+    }) 
+    console.log(newArr1)
+    //Reduce method
+    let arr5 = [1,2,3,4,5]
+    const output = arr5.reduce((prev,curr)=>{
+        return prev+curr;
+    })
+    console.log(output)
+    //How to find larger no by reduce method
+    let arr6 = [2,4,5,6,7,89]
+    const val1 = arr6.reduce((prev , curr)=>{
+        return prev>curr?prev:curr;
+    })
+    console.log(val1)
+    // practice question
+    let marks = [98,78,99,89,94,93,92,87,75,76,65,54,43,32,]
+    const topper = marks.filter((val)=>{
+        return val>90;
+    })
+    console.log(topper)
+
+    // Question 2
+    let n = prompt("Enter the number")
+    let array = []
+   for(let i = 1; i<=n; i++){
+   array[i-1]=i;
+   }
+   console.log(array);
+  //Solve this problem by reduce method.
+  //Sum:
+  let add = array.reduce((res,curr)=>{
+    return res + curr;
+  })
+  console.log("sum = ", add);
+  //Factorial:
+  let factorial = array.reduce((res,curr)=>{
+    return res * curr;
+  })
+  console.log("factorial = ", factorial);
+   
+
+    
+   </script>
+</body>
+</html>

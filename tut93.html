@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event</title>
+</head>
+
+<body>
+   <button id="mode">Change mode </button>
+   <p id="para">Hello java script</p>
+   <div class="abc">Hello i am shivam</div>
+   <div1 class="ajax">Hi hello</div1>
+   <div id="son">I am box</div>
+
+
+
+   <script>
+
+
+      //  Practice question :-
+      //Create a toggle button that change the screen to dark mode when clicked a light mode when clicked again :-
+
+      // Practice question 
+      // create a h2 heading element with text -"Hello java script" append from apna college student to this text using js
+
+      let ele = document.createElement("h2")
+      console.log(ele)
+      ele.innerText = "Hello java script"
+      document.querySelector("body").append(ele)
+      ele.innerText = ele.innerText + " by Apna college";
+      let para = document.querySelector("p")
+      console.log(para.getAttribute("id"));
+
+      let val = document.querySelector("div")
+      console.log(val.getAttribute("class"))
+
+      //setAttribute:-
+      let elem = document.querySelector("div1")
+      console.log(elem.setAttribute("class", "newClass"))
+
+      let div = document.querySelector("div")
+      console.log(div)
+      div.style.backgroundColor = "grey";
+      //            Append :-
+      // let btn1 = document.querySelector("button")
+      // console.log(btn1)
+      //  let big = document.querySelector("body")
+      // console.log(big.append(btn1))
+      //           Prepend:-
+      let btn2 = document.querySelector("button")
+      console.log(btn2)
+      // let val2 = document.querySelector("body")
+      // console.log(val2.prepend(btn2))
+      // btn2.style.backgroundColor = "pink"
+      //  Remove :-
+      btn2.remove();
+
+      //   callabck hell 
+      // function getData(dataId, getNextData) {
+      //    setTimeout(() => {
+      //       console.log("getData", dataId)
+      //       if (getNextData) {
+      //          getNextData();
+      //       }
+      //    }, 2000);
+      // }
+      // console.log("fetching data1....")
+
+      // getData(1, () => {
+      //    console.log("fetching data2....")
+      //    getData(2, () => {
+      //       console.log("fetching data3....")
+      //       getData(3, () => {
+      //          console.log("fetching data4....")
+      //          getData(4, () => {
+      //             console.log("fetching data5....")
+      //             getData(5, () => {
+      //                console.log("fetching data6....")
+
+      //                getData(6)
+      //             });
+      //          });
+      //       });
+      //    });
+      // });
+
+      //Promises and promise chaining:-
+   //    function asyncFunc(dataId){
+   //       return new Promise((resolve,reject)=>{
+   //          setTimeout(()=>{
+   //             console.log("asyncFunc",dataId)
+   //             resolve("success")
+   //          },2000)
+   //       });
+   //    };
+   //   console.log("fetching data1....")
+   //   asyncFunc(1).then((res)=>{
+   //       console.log(res);
+   //       console.log("fetching data2....")
+   // asyncFunc(2).then((res)=>{
+   //    console.log(res)
+   // })
+   //    })
+//   second example:-
+
+   // function getData(dataId) {
+   //    return new Promise((resolve,reject)=>{
+   //       setTimeout(() => {
+   //          console.log("Data", dataId)
+   //         resolve("success")
+   //       }, 3000);
+   //    });
+   //    };
+
+//  console.log("fetching data1....")
+// getData(1).then((res)=>{   
+//     console.log("fetching data2....")
+// getData(2).then((res)=>{ 
+//     console.log("fetching data3....")
+//    getData(3).then((res)=>{  
+//        console.log("fetching data4....")
+//    getData(4).then((res)=>{
+// console.log(res)
+//    });
+//    });
+// });
+// });
+
+//Async await:-
+// function getData(dataId) {
+//       return new Promise((resolve,reject)=>{
+//          setTimeout(() => {
+//             console.log("Data", dataId)
+//            resolve("success")
+//          }, 3000);
+//       });
+//       };
+
+//      (async function getAllData(){
+//          console.log("fetching data1....")
+//          await getData(1);
+//          console.log("fetching data2....")
+//          await getData(2);
+//          console.log("fetching data3....")
+//          await getData(3);
+//          console.log("fetching data4....")
+//          await getData(4);
+//          console.log("fetching data5....")
+//          await getData(5);
+//          console.log("fetching data6....")
+//          await getData(6);
+//       })();
+
+
+let str1 = "apna";
+let str2 = "college";
+console.log(str1.concat(str2))
+//Array
+let name = ["mohan","rohan","kavi","ravi","shivam","rohan","sohan"];
+ for(let val of name){
+   console.log(val);
+ }
+
+// by for loop: 
+// example:-
+// for(let i= 0; i<arr.length;i++){
+//    console.log(i)
+// };
+
+// example: 
+// let arr = ["spiderman","antman","hulkman","tiggerdmen"]
+// for(let i = 0; i<arr.length;i++){
+//    console.log(arr)
+// }
+
+let marks =[85,87,96,78,65];
+ let sum = 0;
+for(let val of marks){
+//  sum = sum + val
+ sum += val;
+ //sum = 0 + 85 //ans = 85
+ //sum = 85 + 87;
+
+}
+let avg = sum / marks.length;
+console.log(`The avg marks of student is ${avg}%`)
+
+//next question :-
+
+let items = [250,645,300,900,50];
+// let i = 0;
+// for(let val of items){
+//    console.log(` value before offer${i} = ${val}`)
+//    let offer = val / 10;
+//    items[i] = items[i]- offer;
+//    console.log(`value after offer = ${items[i]}`)
+//    // let value = val - offer;
+//    // console.log(value)
+//    i++;
+  
+// };
+
+for(let i = 0; i<items.length; i++){
+   console.log(`Before offer = ${items[i]}`)
+   let offer = items[i] / 10;
+   value = items[i] - offer
+   console.log(`after offer ${value}`)
+}
+
+//concat:-
+let marvel_heroes = ["shaktiman","bahubali","antmen","hulkmen","spidermen","teadybear"]
+let dc_heroes = ["ironmen","batmen"]
+let indian_heroes = ["powermen","laxmibai","mahranapartan","bhagatsing"]
+console.log(marvel_heroes.concat(dc_heroes,indian_heroes))
+//splice:-
+let arr = [1,2,3,4,5,6,7]
+
+arr.splice(2,2,101,102);
+// console.log(arr)
+//Add method:-
+arr.splice(2,0,167)
+// console.log(arr)
+
+// delete method:-
+arr.splice(2,1)
+
+//replace method:-
+arr.splice(2,1,202)
+
+//Function:-
+// function myFunction(){
+//    console.log("This is a function 1")
+//     console.log("This is a function 2")
+//      console.log("This is a function 3")
+//       console.log("This is a function4")
+// }
+
+// myFunction();
+// myFunction();
+function myFunction (msg){
+   //parameter.
+   console.log(msg)
+}
+myFunction("I love js"); //Argument.
+
+// return :-
+function mul(x,y){
+   m = x * y;
+   return m;
+}
+let abc = mul(3 , 4);
+console.log(abc)
+
+//forEach method:-
+ let nums = [2,3,4,5,6];
+ nums.forEach((num)=>{
+   console.log(num*num);
+ });
+
+//  Assignment operator :-
+// += ;
+// -= ;
+// *= ; 
+// /= ;
+// **= ;
+
+let a = 5;
+let b = 2;
+// console.log(a += 4);
+// console.log(a -= 5);
+// console.log(a **= 5);
+console.log(a /= 2);
+
+// Ternary operator :-
+let age = 17;
+console.log(age>=18?"adult":"not adult")
+</script>
+</body>
+
+</html>
