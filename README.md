@@ -1,4 +1,4 @@
-# college-demo
+# HTML TUTORIAL
 This is my first Git Repository. 
 <br>
 Author - Shivam Roy
